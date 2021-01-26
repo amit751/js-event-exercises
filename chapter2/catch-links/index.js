@@ -8,7 +8,7 @@ function leav(event){
     // event.preventDefult();
     let is = confirm ("do you want to leav the page?");
     if(!is){
-    event.preventDefult();
+    event.preventDefault();
     }
     // event.preventDefult()=true;
 
