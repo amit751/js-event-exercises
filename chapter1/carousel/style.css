@@ -1,0 +1,9 @@
+ul img {
+    width: 130px;
+    height: 130px;
+    display: block; /* removes extra space near images */
+}
+  
+ul li {
+    display: inline-block; /* removes extra space between list items*/
+}
