@@ -1,19 +1,23 @@
 const clickToOpen = document.getElementById("click-toopen");
 const list = document.querySelector("ul");
+// clickToOpen.addEventListener("click", close);
 clickToOpen.addEventListener("click", open);
 clickToOpen.addEventListener("click", close);
-let status =0;
+
 function close(){
-    if(!status){
+    clickToOpen.removeEventListener("click", open);
     list.remove();
-    status=1;
-    }
+    clickToOpen.addEventListener("click", open);
+    clickToOpen.removeEventListener("click", close);
+    
+    
 }
 
 function open(){
-    if(status){
+   
     document.body.append(list);
-    status=0;
-    }
+    clickToOpen.addEventListener("click", close);
+
+    
 }
 
