@@ -5,8 +5,11 @@ for (const link of links) {
 }
 
 function leav(event){
+    // event.preventDefult();
+    let is = confirm ("do you want to leav the page?");
+    if(!is){
     event.preventDefult();
-    alert("do you want to leav the page?");
+    }
     // event.preventDefult()=true;
 
 }
