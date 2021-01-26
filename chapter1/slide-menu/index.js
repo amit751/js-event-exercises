@@ -9,7 +9,8 @@ clickToOpen.addEventListener("click", close);
 
 
 function close(){
-    clickToOpen.appendChild(closedA);
+    
+    clickToOpen.insertBefore(closedA, clickToOpen.firstChild);
     clickToOpen.removeEventListener("click", open);
     list.remove();
     openA.remove();
@@ -21,9 +22,11 @@ function close(){
 
 function open(){
 
-    clickToOpen.appendChild(openA);
+    
+    
     document.body.append(list);
     closedA.remove();
+    clickToOpen.insertBefore(openA, clickToOpen.firstChild);
     clickToOpen.addEventListener("click", close);
 
     
